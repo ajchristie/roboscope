@@ -1,0 +1,19 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+<link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+<style type="text/css">
+body { background-color: black !important;
+  color: white !important;
+  font-family: 'Alegreya SC';font-size: 22px !important;
+}
+</style>
+
+
+<center>
+  <h1 class="display-2">
+    Today's portents:
+  </h1>
+  <br><br>
+  <p style="width: 30rem;"> {{ scope }} </p>
+</center>
