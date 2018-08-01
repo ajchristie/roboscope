@@ -24,7 +24,7 @@ body { background-color: black !important;
       <div class="form-group">
         <form action="{% url 'result' %}" method="post" class="form">
           {% csrf_token %}
-          <select name="sign" class="">
+          <select name="sign" class="form-control-sm">
             <option hidden disabled selected value>Tell Me</option>
             <option value="aries"/>Aries</option>
             <option value="aquarius"/>Aquarius</option>
@@ -40,7 +40,7 @@ body { background-color: black !important;
             <option value="virgo"/>Virgo</option>
           </select>
           <br><br>
-          <button type="submit" class="btn btn-default">Shemhamforash!</button>
+          <button type="submit" class="btn btn-outline-default">Shemhamforash!</button>
         </form>
       </div>
     </div>
