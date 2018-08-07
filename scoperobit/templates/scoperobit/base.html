@@ -1,0 +1,13 @@
+<head>
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load static %}
+<link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+<link rel="stylesheet" href="{% static "scoperobit/style.css" %}">
+<script type="text/javascript" src="{% static "scoperobit/drop.js" %}"></script>
+</head>
+<body>
+  {% block content %}
+  {% endblock %}
+</body>

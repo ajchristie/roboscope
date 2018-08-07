@@ -1,0 +1,48 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load static %}
+<link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+<style type="text/css">
+body { background-color: black !important;
+  color: white !important;
+  font-family: 'Alegreya SC';
+  font-size: 22px;
+}
+</style>
+
+<center>
+  <h1 class="display-2">
+    Hey babey, what's yr sign?
+  </h1>
+  <br><br>
+  <div class="card" style="width:30rem; background-color: black; color: white;">
+    <img class="card-img-top" src="{% static "scoperobit/images/MulhollandSilencio.GIF" %}"
+    style="-webkit-mask-image: radial-gradient(closest-side, black 0%, transparent 100%);
+    mask-image: radial-gradient(closest-side, black 0%, transparent 100%);"/>
+    <div class="card-body">
+      <div class="form-group">
+        <form action="{% url 'result' %}" method="post" class="form">
+          {% csrf_token %}
+          <select name="sign" class="form-control-sm">
+            <option hidden disabled selected value>Tell Me</option>
+            <option value="aries"/>Aries</option>
+            <option value="aquarius"/>Aquarius</option>
+            <option value="cancer"/>Cancer</option>
+            <option value="capricorn"/>Capricorn</option>
+            <option value="gemini"/>Gemini</option>
+            <option value="leo"/>Leo</option>
+            <option value="libra"/>Libra</option>
+            <option value="pisces"/>Pisces</option>
+            <option value="sagittarius"/>Sagittarius</option>
+            <option value="scorpio"/>Scorpio</option>
+            <option value="taurus"/>Taurus</option>
+            <option value="virgo"/>Virgo</option>
+          </select>
+          <br><br>
+          <button type="submit" class="btn btn-outline-default">Shemhamforash!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</center>
