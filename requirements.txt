@@ -1,2 +1,3 @@
 markovify
+nltk
 django-bootstrap4
