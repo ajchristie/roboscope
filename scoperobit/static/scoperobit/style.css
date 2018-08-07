@@ -2,7 +2,7 @@
 
 * {
   outline: 0;
-  font-family: 'Alegreya SC';
+  font-family: 'Marcellus SC';
 }
 body {
   color: white;
@@ -17,7 +17,7 @@ span.choose {
 .container {
   width: 500px;
   margin: 50px auto 0;
-  text-align: center
+  text-align: center;
 }
 
 /*Styling Selectbox*/
@@ -90,4 +90,36 @@ span.choose {
 }
 .dropdown .dropdown-menu li:active {
     background-color: #e2e2e2
+}
+
+/* For attempt at fancy transition */
+.transition {
+  position:absolute;
+  height:100%;
+  width:20%;
+  background:#7D0101;
+  transform: skewX(-5deg) translateX(-50px);
+  transition:2s all ease-in-out;
+  -webkit-transition:2s all ease-in-out;
+}
+
+.anim-trans {
+  animation: anim 4s ease-in-out;
+  }
+
+@keyframes anim{
+     0% { }
+     20%  { z-index:11; transform: skewX(5deg) translateX(-100%); }
+     40%   { transform: skewX(0deg) translateX(0);
+ width:100%; z-index:11; box-shadow: 10px 10px 5px #3C0000;}
+     60%   { transform: skewX(3deg) translateX(0);
+ width:100%;z-index:11; box-shadow: 10px 10px 5px #3C0000;}
+     80%   { transform: skewX(1deg) translateX(-100%);
+ width:60%;z-index:11; box-shadow: 10px 10px 5px #3C0000;}
+     100%   { transform: skewX(-5deg) translateX(-50px);
+ width:30%;z-index:11; box-shadow: none;}
+}
+
+.result {
+  display: none
 }

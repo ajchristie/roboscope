@@ -16,19 +16,27 @@ $(document).ready( function() {
       });
   /*End Dropdown Menu*/
 
-
+  /* On Click Actions */
   $('.dropdown-menu li').click(function () {
+
     var input = $(this).parents('.dropdown').find('input').val();
     /*var csrftoken = getCookie('csrftoken'); --let this be handled in template */
     var form = $(this).parents('form');
-    var field = $("<input></input>");
-    field.attr("type", "hidden");
-    field.attr("name", "sign");
-    field.attr("value", input);
-    form.append(field);
-    form.submit();
-
+    $('.front').delay(1000).fadeOut('slow')
+    $( ".transition").toggleClass( "anim-trans" ).on('animationend', function() {
+      var field = $("<input></input>");
+      field.attr("type", "hidden");
+      field.attr("name", "sign");
+      field.attr("value", input);
+      form.append(field);
+      form.submit();
+    });
   });
+
+
+  /* Fade In Results Page */
+  $('.result').fadeIn('slow');
+
 });
 
 /* Additional CSRF Handling */
