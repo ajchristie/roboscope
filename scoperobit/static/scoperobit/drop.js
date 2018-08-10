@@ -20,7 +20,7 @@ $(document).ready( function() {
   $('.dropdown-menu li').click(function () {
     var input = $(this).parents('.dropdown').find('input');
     var form = $(this).parents('form');
-    /*var csrftoken = getCookie('csrftoken'); --let this be handled in template */
+    /*var csrftoken = getCookie('csrftoken'); --let this be handled by template engine instead */
     $('.front').delay(1000).fadeOut('slow')
     $('.transition').toggleClass('anim-trans').on('animationend', function() {
       form.append(input);
@@ -34,7 +34,7 @@ $(document).ready( function() {
 
 });
 
-/* Additional CSRF Handling -- this will be handled in template instead */
+/* Additional CSRF Handling -- this will be left to the template engine instead */
 /*function getCookie(name) {
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {

@@ -1,6 +1,7 @@
 roboscopes/local_settings.py
 db.sqlite3
-.DS_Store
+*.DS_Store
 roboscopes/__pycache__
 scoperobit/.DS_Store
 scoperobit/__pycache__
+test.html

@@ -1,4 +1,4 @@
-/* Styling for dropdown select*/
+/* General and Front Page Styling */
 
 * {
   outline: 0;
@@ -8,6 +8,7 @@ body {
   color: white;
   background-color: black;
 }
+
 span.msg,
 span.choose {
   color: #555;
@@ -144,6 +145,7 @@ img.grad {
      }
 }
 
+/* Results Page Styling */
 /* Result is hidden by default to get clean fade in */
 .result {
   display: none;
