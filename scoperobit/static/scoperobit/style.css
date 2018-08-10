@@ -20,7 +20,12 @@ span.choose {
   text-align: center;
 }
 
-/*Styling Selectbox*/
+img.grad {
+  -webkit-mask-image: radial-gradient(closest-side, black 0%, transparent 100%);
+  mask-image: radial-gradient(closest-side, black 0%, transparent 100%);
+}
+
+/*Styling for Select Dropdown*/
 .dropdown {
   width: 300px;
   display: inline-block;
@@ -92,7 +97,7 @@ span.choose {
     background-color: #e2e2e2
 }
 
-/* For attempt at fancy transition */
+/* For attempt at fancy page transition */
 .transition {
   position:absolute;
   height:100%;
@@ -109,17 +114,42 @@ span.choose {
 
 @keyframes anim{
      0% { }
-     20%  { z-index:11; transform: skewX(5deg) translateX(-100%); }
-     40%   { transform: skewX(0deg) translateX(0);
- width:100%; z-index:11; box-shadow: 10px 10px 5px #3C0000;}
-     60%   { transform: skewX(3deg) translateX(0);
- width:100%;z-index:11; box-shadow: 10px 10px 5px #3C0000;}
-     80%   { transform: skewX(1deg) translateX(-100%);
- width:60%;z-index:11; box-shadow: 10px 10px 5px #3C0000;}
-     100%   { transform: skewX(-5deg) translateX(-50px);
- width:30%;z-index:11; box-shadow: none;}
+     20%  {
+       z-index:11;
+       transform: skewX(5deg) translateX(-100%);
+     }
+     40%   {
+       z-index:11;
+       transform: skewX(0deg) translateX(0);
+       width:100%;
+       box-shadow: 10px 10px 5px #3C0000;
+     }
+     60%   {
+       z-index:11;
+       transform: skewX(3deg) translateX(0);
+       width:100%;
+       box-shadow: 10px 10px 5px #3C0000;
+     }
+     80%   {
+       z-index:11;
+       transform: skewX(1deg) translateX(-100%);
+       width:60%;
+       box-shadow: 10px 10px 5px #3C0000;
+     }
+     100%   {
+       z-index:11;
+       transform: skewX(-5deg) translateX(-50px);
+       width:30%;
+       box-shadow: none;
+     }
 }
 
+/* Result is hidden by default to get clean fade in */
 .result {
-  display: none
+  display: none;
+}
+
+p.horoscope {
+  width: 30rem;
+  font-size: 21px;
 }

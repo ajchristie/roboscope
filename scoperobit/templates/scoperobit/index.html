@@ -9,9 +9,7 @@
     What's yr sign?
   </h1>
   <br><br>
-    <img class="" src="{% static "scoperobit/images/MulhollandSilencio.GIF" %}"
-    style="-webkit-mask-image: radial-gradient(closest-side, black 0%, transparent 100%);
-    mask-image: radial-gradient(closest-side, black 0%, transparent 100%);"/>
+    <img class="grad" src="{% static "scoperobit/images/MulhollandSilencio.GIF" %}"/>
       <div class="container">
         <form action="{% url 'result' %}" method="post" class="form">
           {% csrf_token %}

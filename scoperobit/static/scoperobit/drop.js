@@ -5,30 +5,25 @@ $(document).ready( function() {
           $(this).attr('tabindex', 1).focus();
           $(this).toggleClass('active');
           $(this).find('.dropdown-menu').slideToggle(300);
-      });
-      $('.dropdown').focusout(function () {
+  });
+  $('.dropdown').focusout(function () {
           $(this).removeClass('active');
           $(this).find('.dropdown-menu').slideUp(300);
-      });
-      $('.dropdown .dropdown-menu li').click(function () {
+  });
+  $('.dropdown .dropdown-menu li').click(function () {
           $(this).parents('.dropdown').find('span').text($(this).text());
           $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
-      });
+  });
   /*End Dropdown Menu*/
 
   /* On Click Actions */
   $('.dropdown-menu li').click(function () {
-
-    var input = $(this).parents('.dropdown').find('input').val();
-    /*var csrftoken = getCookie('csrftoken'); --let this be handled in template */
+    var input = $(this).parents('.dropdown').find('input');
     var form = $(this).parents('form');
+    /*var csrftoken = getCookie('csrftoken'); --let this be handled in template */
     $('.front').delay(1000).fadeOut('slow')
-    $( ".transition").toggleClass( "anim-trans" ).on('animationend', function() {
-      var field = $("<input></input>");
-      field.attr("type", "hidden");
-      field.attr("name", "sign");
-      field.attr("value", input);
-      form.append(field);
+    $('.transition').toggleClass('anim-trans').on('animationend', function() {
+      form.append(input);
       form.submit();
     });
   });
@@ -39,7 +34,7 @@ $(document).ready( function() {
 
 });
 
-/* Additional CSRF Handling */
+/* Additional CSRF Handling -- this will be handled in template instead */
 /*function getCookie(name) {
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {
