@@ -23,6 +23,7 @@ $(document).ready( function() {
     /*var csrftoken = getCookie('csrftoken'); --let this be handled by template engine instead */
     $('.front').delay(1000).fadeOut('slow')
     $('.transition').toggleClass('anim-trans').on('animationend', function() {
+      $('.transition').removeClass('transition');
       form.append(input);
       form.submit();
     });
