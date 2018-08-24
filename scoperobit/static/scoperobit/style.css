@@ -134,7 +134,7 @@ img.grad {
      100%   {
        z-index:11;
        transform: skewX(0deg) translateX(-100%);
-       width:60%;
+       width:20%;
        box-shadow: 10px 10px 5px #3C0000;
      }
      /*100%   {
@@ -143,6 +143,24 @@ img.grad {
        width:20%;
        box-shadow: none;
      }*/
+}
+
+/* Breakpoints for mobile layout */
+
+@media only screen and (max-width: 768px) {
+  .front {
+    padding: 100px 0;
+  }
+
+  .transition {
+    position:absolute;
+    height:100%;
+    width:20%;
+    background:#7D0101;
+    transform: skewX(-5deg) translateX(-110px);
+    transition:2s all ease-in-out;
+    -webkit-transition:2s all ease-in-out;
+  }
 }
 
 /* Results Page Styling */
