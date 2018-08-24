@@ -5,13 +5,13 @@
 <div class="transition"></div>
 <center>
   <div class="front">
-  <h1 class="display-2">
+  <h1 class="topline">
     What's yr sign?
   </h1>
-  <br><br>
+  <br>
     <img class="grad" src="{% static "scoperobit/images/MulhollandSilencio.GIF" %}"/>
       <div class="container">
-        <form action="{% url 'result' %}" method="post" class="form">
+        <form action="{% url 'result' %}" method="post">
           {% csrf_token %}
       <div class="dropdown">
         <div class="select">
@@ -33,7 +33,6 @@
           <li id="virgo">Virgo</li>
         </ul>
       </div>
-      <span class="msg"></span>
     </form>
     </div>
   </div>

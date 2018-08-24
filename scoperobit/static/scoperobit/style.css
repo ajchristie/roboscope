@@ -1,27 +1,30 @@
 /* General and Front Page Styling */
 
 * {
+  box-sizing: border-box;
   outline: 0;
   font-family: 'Marcellus SC';
 }
+
 body {
   color: white;
   background-color: black;
 }
 
-span.msg,
 span.choose {
   color: #555;
   padding: 5px 0 10px;
-  display: inherit
+  display: inherit;
 }
+
 .container {
-  width: 500px;
+  width: 100%;
   margin: 50px auto 0;
-  text-align: center;
 }
 
 img.grad {
+  max-width: 100%;
+  height: auto;
   -webkit-mask-image: radial-gradient(closest-side, black 0%, transparent 100%);
   mask-image: radial-gradient(closest-side, black 0%, transparent 100%);
 }
@@ -35,39 +38,33 @@ img.grad {
   box-shadow: 0 0 2px rgb(204, 204, 204);
   transition: all .5s ease;
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
   color: #474747;
   height: 40px;
-  text-align: left
+  text-align: left;
 }
+
 .dropdown .select {
     cursor: pointer;
     display: block;
-    padding: 10px
+    padding: 8px 10px 8px;
 }
-.dropdown .select > i {
-    font-size: 13px;
-    color: #888;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    float: right;
-    line-height: 20px
-}
+
 .dropdown:hover {
-    box-shadow: 0 0 4px rgb(204, 204, 204)
+    box-shadow: 0 0 4px rgb(204, 204, 204);
 }
+
 .dropdown:active {
-    background-color: #f8f8f8
+    background-color: #f8f8f8;
 }
+
 .dropdown.active:hover,
 .dropdown.active {
     box-shadow: 0 0 4px rgb(204, 204, 204);
     border-radius: 5px 5px 0 0;
-    background-color: #f8f8f8
+    background-color: #f8f8f8;
 }
-.dropdown.active .select > i {
-    transform: rotate(-90deg)
-}
+
 .dropdown .dropdown-menu {
     position: absolute;
     background-color: #fff;
@@ -78,24 +75,28 @@ img.grad {
     border-radius: 0 1px 5px 5px;
     overflow: hidden;
     display: none;
-    max-height: 144px;
+    max-height: 135px;
     overflow-y: auto;
-    z-index: 9
+    z-index: 9;
 }
+
 .dropdown .dropdown-menu li {
     padding: 10px;
     transition: all .2s ease-in-out;
-    cursor: pointer
+    cursor: pointer;
 }
+
 .dropdown .dropdown-menu {
     padding: 0;
-    list-style: none
+    list-style: none;
 }
+
 .dropdown .dropdown-menu li:hover {
-    background-color: #f2f2f2
+    background-color: #f2f2f2;
 }
+
 .dropdown .dropdown-menu li:active {
-    background-color: #e2e2e2
+    background-color: #e2e2e2;
 }
 
 /* For attempt at fancy page transition */
@@ -127,7 +128,7 @@ img.grad {
      }
      75%   {
        z-index:11;
-       transform: skewX(3deg) translateX(0);
+       transform: skewX(0deg) translateX(0);
        width:100%;
        box-shadow: 10px 10px 5px #3C0000;
      }
@@ -137,30 +138,6 @@ img.grad {
        width:20%;
        box-shadow: 10px 10px 5px #3C0000;
      }
-     /*100%   {
-       z-index:11;
-       transform: skewX(-5deg) translateX(-50px);
-       width:20%;
-       box-shadow: none;
-     }*/
-}
-
-/* Breakpoints for mobile layout */
-
-@media only screen and (max-width: 768px) {
-  .front {
-    padding: 100px 0;
-  }
-
-  .transition {
-    position:absolute;
-    height:100%;
-    width:20%;
-    background:#7D0101;
-    transform: skewX(-5deg) translateX(-110px);
-    transition:2s all ease-in-out;
-    -webkit-transition:2s all ease-in-out;
-  }
 }
 
 /* Results Page Styling */
@@ -170,6 +147,42 @@ img.grad {
 }
 
 p.horoscope {
-  width: 30rem;
+  width: 65%;
   font-size: 21px;
+}
+
+/* Breakpoints for mobile layout */
+/* SE device-width is 320px */
+@media only screen and (max-width:320px) and (orientation: portrait) {
+
+  .transition {
+    position:absolute;
+    height:100%;
+    width:20%;
+    background:#7D0101;
+    transform: skewX(-3deg) translateX(-50px);
+    transition:2s all ease-in-out;
+    -webkit-transition:2s all ease-in-out;
+  }
+
+  .result {
+    display: none;
+  }
+
+  p.horoscope {
+    width: 65%;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width:799px) and (max-width:1023px) {
+  .topline {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (min-width:1023px) {
+  .topline {
+    font-size: 6rem;
+  }
 }

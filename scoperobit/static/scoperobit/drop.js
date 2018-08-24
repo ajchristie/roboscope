@@ -16,7 +16,7 @@ $(document).ready( function() {
   });
   /*End Dropdown Menu*/
 
-  /* On Click Actions */
+  /* Form Submission, Page Transition */
   $('.dropdown-menu li').click(function () {
     var input = $(this).parents('.dropdown').find('input');
     var form = $(this).parents('form');
